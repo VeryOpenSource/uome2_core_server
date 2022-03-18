@@ -1,0 +1,23 @@
+{
+  "name": "uome2_core_server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VeryOpenSource/uome2_core_server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VeryOpenSource/uome2_core_server/issues"
+  },
+  "homepage": "https://github.com/VeryOpenSource/uome2_core_server#readme",
+  "devDependencies": {
+    "typescript": "^4.6.2"
+  }
+}
