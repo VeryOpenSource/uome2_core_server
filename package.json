@@ -1,27 +1,42 @@
 {
-  "name": "uome2_core_server",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/VeryOpenSource/uome2_core_server.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/VeryOpenSource/uome2_core_server/issues"
-  },
-  "homepage": "https://github.com/VeryOpenSource/uome2_core_server#readme",
-  "devDependencies": {
-    "eslint": "^8.11.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "prettier": "^2.6.0",
-    "typescript": "^4.6.2"
-  }
+	"name": "uome2_core_server",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"build": "rimraf ./build && tsc",
+		"start:dev": "nodemon",
+		"start": "npm run build && node build/index.js",
+		"lint": "eslint . --ext .ts",
+		"lint-and-fix": "eslint . --ext .ts --fix",
+		"prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/VeryOpenSource/uome2_core_server.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/VeryOpenSource/uome2_core_server/issues"
+	},
+	"homepage": "https://github.com/VeryOpenSource/uome2_core_server#readme",
+	"devDependencies": {
+		"@types/express": "^4.17.13",
+		"@types/node": "^17.0.21",
+		"@typescript-eslint/eslint-plugin": "^5.15.0",
+		"@typescript-eslint/parser": "^5.15.0",
+		"eslint": "^8.11.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-prettier": "^4.0.0",
+		"nodemon": "^2.0.15",
+		"prettier": "^2.6.0",
+		"rimraf": "^3.0.2",
+		"ts-node": "^10.7.0",
+		"typescript": "^4.6.2"
+	},
+	"dependencies": {
+		"express": "^4.17.3"
+	}
 }
