@@ -3,5 +3,5 @@
   "singleQuote": true,
   "useTabs": true,
   "trailingComma": "all",
-  "endOfLine": "crlf"
+  "endOfLine": "auto"
 }
