@@ -1,11 +1,20 @@
-import express from 'express';
-const app = express();
-const port = 3000;
+import 'module-alias/register';
 
-app.get('/', (req: any, res: any) => {
-	res.send('Hello World!');
-});
+import helmet from 'helmet';
+import { StartProjectInit } from '@tsclean/core';
 
-app.listen(port, () => {
-	console.log(`Example app listening on port ${port}`);
-});
+import { AppContainer } from '@/application/app';
+import { PORT } from '@/application/config/environment';
+
+async function init() {
+	const app = await StartProjectInit.create(AppContainer);
+	app.use(helmet());
+	app.use('/', (req: any, res: any) => {
+		res.json({ message: 'hello' });
+	});
+	if (PORT) {
+		await app.listen(PORT, () => console.log('Running on port ' + PORT));
+	}
+}
+
+init().catch();
